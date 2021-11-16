@@ -15,7 +15,7 @@ export const description = `Tobias Schmidt's personal website.`
 export const tags = ['index', 'list']
 
 export default async (
-    {site, time, author, content, search},
+    {site, time, author, content, search, comp},
     { njk, md, url, date, htmlUrl }) => {
 
     const lastPost = search.pages("post", "date=desc").shift()
@@ -39,6 +39,7 @@ export default async (
             ${PostHeader({title: lastPostTitle, date: lastPostDate})}
             ${Prose({content: lastPostHtml})}
         `})}
+        ${comp.button("./", "Go to home")}
         ${PostList({posts})}
     `})}
 `}
