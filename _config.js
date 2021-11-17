@@ -10,7 +10,6 @@ import markdown from './_markdown.js'
 import preprocess from './_preprocess.js'
 import process from './_process.js'
 import helper from './_helper.js'
-import components from './_components.js'
 import componentsPlugin from './components/components.ts';
 
 const site = JSON.parse(Deno.readTextFileSync('./src/_data/site.json'));
@@ -35,7 +34,6 @@ generator
 generator
     .copy('assets/fonts')
     .copy('assets/img')
-    // .copy('assets/js')
     .copy('tobiasschmidt.pgp')
 
 for (let p of preprocess) {
@@ -48,10 +46,6 @@ for (let p of process) {
 
 for (let h of helper) {
     generator.helper(h[0], h[1], h[2])
-}
-
-for (let c of components) {
-    generator.helper(c[0], c[1], c[2])
 }
 
 export default generator

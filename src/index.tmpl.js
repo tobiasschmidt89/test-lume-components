@@ -1,11 +1,11 @@
-import TechHead from './_includes/head/TechHead.js'
-import MetaHead from './_includes/head/MetaHead.js'
+import TechHead from '../_components/head/TechHead.tmpl.js'
+import MetaHead from '../_components/head/MetaHead.tmpl.js'
 
-import Body from './_includes/components/Body/tmpl.js'
-import Article from './_includes/components/Article/tmpl.js'
-import PostHeader from './_includes/components/PostHeader/tmpl.js'
-import Prose from './_includes/components/Prose/tmpl.js'
-import PostList from './_includes/components/PostList/tmpl.js'
+import Body from '../_components/Body.tmpl.js'
+import Article from '../_components/Article.tmpl.js'
+import PostHeader from '../_components/PostHeader.tmpl.js'
+import Prose from '../_components/Prose.tmpl.js'
+import PostList from '../_components/PostList.tmpl.js'
 
 export const layout = 'layouts/base.njk'
 export const url = '/'

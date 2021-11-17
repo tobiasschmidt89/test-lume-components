@@ -26,3 +26,24 @@ export default ({author}) => `
 
 </nav>
 `
+
+export const css = `
+.site-navigation {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11ch, 1fr));
+    gap: var(--gutter);
+}
+
+.site-navigation div * {
+    display: block;
+}
+
+.site-navigation a {
+    text-decoration: none;
+    color: var(--link-on-canvas);
+}
+
+.site-navigation a:hover {
+    color: unset;
+}
+`

@@ -1,3 +1,10 @@
+export default () => `
+<header id="site-header" class="site-header" aria-hidden="false">
+    <a href="#nav" id="skiplink">Go to navigation.</a>
+</header>
+`
+
+export const css = `
 .site-header {
     position: absolute;
     margin: -1px;
@@ -13,3 +20,4 @@
 .site-header:focus-within {
     all: unset;
 }
+`

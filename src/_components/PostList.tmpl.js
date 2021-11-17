@@ -26,5 +26,36 @@ export default ({posts}) => {
     </ol>
 </nav>
 `
-
 }
+
+export const css = `
+.post-list {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--gutter)
+}
+
+.post-list ol {
+    list-style: none;
+}
+
+.post-list > ol > li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--gap)
+}
+
+.post-list h2 {
+    font-weight: normal;
+}
+
+.post-list a {
+    text-decoration: none;
+    color: var(--link-on-canvas);
+}
+
+.post-list a:hover {
+    color: unset;
+}
+
+`

@@ -1,3 +1,9 @@
+export default ({content}) => `
+<div class="prose">
+${content}
+</div>
+`
+export const css = `
 .prose {
     display: grid;
     grid-template-columns: minmax(0, 1fr);
@@ -224,3 +230,5 @@
     }
 
 }
+
+`
